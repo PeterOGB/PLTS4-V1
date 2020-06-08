@@ -1,0 +1,44 @@
+
+QUADRATIC ROOTS'
+
+BEGIN REAL A,B,C,DISC,ROOTA,ROOTB'
+INTEGER N,M'
+
+READ N'
+
+FOR M := 1 STEP 1 UNTIL N DO
+
+BEGIN 
+    READ A,B,C'
+    PRINT A,SAMELINE,B,C'
+    DISC := (B * B) - (4.0 * A * C)
+
+    IF DISC LESS 0.0 THEN 
+    BEGIN
+        PRINT SAMELINE,£ NO REAL ROOTS.?
+    END'
+
+    IF DISC = 0.0 THEN
+    BEGIN 
+        ROOTA := -B / (2.0 * A)'
+        PRINT SAMELINE,£ ONE ROUTE AT X =?,ROOTA
+    END'
+
+    IF DISC GR 0.0 THEN 
+    BEGIN 
+        DISC := SQRT(DISC)'
+        ROOTA := (-B + DISC) / (2.0 * A)'
+        ROOTB := (-B - DISC) / (2.0 * A)'
+
+        PRINT SAMELINE,£ TWO ROOTS AT X =?,ROOTA,£ AND X =?,ROOTB
+    END
+END
+END'
+ 
+3
+2.0  0.0  0.0 
+2.0  2.0  1.0
+2.0  0.0  -1.0 
+
+
+
